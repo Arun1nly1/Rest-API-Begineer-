@@ -115,7 +115,7 @@ class UserLoginApiView(ObtainAuthToken):
 class UserProfileFeedViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     serializer_class = serializers.ProfileFeedItemSerializer
-    queryset = ProfileFeedItem.objects.all()
+    queryset =  ProfileFeedItem.objects.all()
     permission_classes = (
         permissions.UpdateOwnStatus,
         IsAuthenticatedOrReadOnly,
